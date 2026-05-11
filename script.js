@@ -6,7 +6,11 @@ const next = document.getElementById("next")
 
 let displayState = 0;
 
-function changeProject;
+function changeProject(){
   desctext.textContent = "This is the description for project 1"
-  let var = "project"+ (displayState+1).twoString()
-  let varnext =
+  let cs = (displayState%2).toString()
+  changeimage.document.body.style.src = `project${cs}.png`
+  displayState += 1
+};
+
+next.addEventListener("click", changeProject);
